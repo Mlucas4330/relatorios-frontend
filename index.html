@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post">
+      <div>
+        <label for="status">Status</label><br />
+        <select required name="status" id="status">
+          <option value="">Selecione</option>
+        </select>
+      </div>
+      <div>
+        <label for="ticket">Ticket</label><br />
+        <input required id="ticket" name="ticket" type="number" />
+      </div>
+      <div>
+        <label for="hora_inicio">Hora Início</label>
+        <input required type="time" name="hora_inicio" id="hora_inicio" />
+        <label for="hora_inicio">Hora Final</label>
+        <input required type="time" name="hora_fim" id="hora_fim" />
+      </div>
+      <div>
+        <label for="descricao">Descrição</label><br />
+        <textarea
+          required
+          style="resize: none"
+          name="descricao"
+          id="descricao"
+          cols="30"
+          rows="5"
+        ></textarea>
+      </div>
+      <button id="submit" type="button">Enviar</button>
+    </form>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Horário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr id="tr">
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button>Gerar PDF</button>
+    <script src="script.js"></script>
+  </body>
+</html>
